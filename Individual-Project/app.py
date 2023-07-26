@@ -97,10 +97,12 @@ def home():
 def women():
     return render_template("women.html")
 
+@app.route('/men')
+def men():
+    return render_template("men.html")
 
-# @app.route('/HP')
-# def HomePage():
-#     return render_template("home.html")
+
+
 
 
 @app.route('/cart')

@@ -1,0 +1,121 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>New Collection!</title>
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<style>
+* {
+  box-sizing: border-box;
+}
+
+.menu {
+  float: left;
+  width: 20%;
+  text-align: center;
+}
+
+.menu a {
+  background-color: #e5e5e5;
+  padding: 8px;
+  margin-top: 7px;
+  display: block;
+  width: 100%;
+  color: black;
+}
+
+.main {
+  float: left;
+  width: 60%;
+  padding: 0 20px;
+}
+.column {
+  float: left;
+  width: 33.33%;
+  padding: 5px;
+}
+
+/* Clearfix (clear floats) */
+.row::after {
+  content: "";
+  clear: both;
+  display: table;
+}
+
+/* Responsive layout - makes the three columns stack on top of each other instead of next to each other */
+@media screen and (max-width: 500px) {
+  .column {
+    width: 100%;
+  }
+}
+/*.center {
+  float: right;
+  width: 60%;
+  padding: 0 20px;
+}
+
+.right {
+  background-color: #e5e5e5;
+  float: inline-end;
+  width: 20%;
+  padding: 15px;
+  margin-top: 7px;
+  text-align: center;
+}*/
+
+
+@media only screen and (max-width: 620px) {
+  /* For mobile phones: */
+  .menu, .main, .right {
+    width: 100%;
+  }
+}
+</style>
+</head>
+<body style="font-family:Verdana;color:lightsteelblue;">
+
+<div style="background-color:#lightsteelblue;padding:15px;text-align:center;">
+  <h1>2STYLE</h1>
+</div>
+
+<div style="overflow:auto">
+  <div class="menu">
+    <a href="/home">back to home page</a>
+
+  </div>
+
+<div class="row">
+  <div class="column">
+    <img src="https://www.franksbigandtall.com/istarimages/mp/711667003001!POLO-14412_d.jpg" alt="Snow" style="width:100%">
+    <h1>Polo Shirt- 250$</h1>
+  </div>
+  <div class="column">
+    <img src="https://cdn.suitdirect.co.uk/upload/siteimages/medium/as23102mj_170_b.jpg" alt="Forest" style="width:100%">
+    <h1>Suit- 400$</h1>
+  </div>
+  <div class="row">
+    <img src="https://www.alwaysfashion.com/images/thumbs/0172748_rolex-datejust-41-oyster-oystersteel-and-white-gold-126334-0017_645.jpeg" alt="Mountains" style="width:33.33%">
+    <h1>Watch Rolex- 40,000$</h1>
+  </div>
+</div>
+
+
+  
+  
+
+  <div class="right">
+    <h2>SALE!</h2>
+    <p>UP TO 50%!!</p>
+  <div class="right1">
+    <h2>NEW COLLECTION!</h2>
+    <p>JUST ARRIVED</p>
+  </div>
+  </div>
+</div>
+
+<div style="background-color:#e5e5e5;text-align:center;padding:10px;margin-top:7px;">© 2STYLE.com</div>
+
+</body>
+</html>
+
+
