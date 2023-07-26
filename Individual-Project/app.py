@@ -32,10 +32,10 @@ def signup():
         fullname = request.form['fullname']
         username = request.form['username']
         try:
-            login_session['user'] =auth.create_user_with_email_and_password(email, password)
+            login_session['user'] = auth.create_user_with_email_and_password(email, password)
             user={'user':username, "fullname":fullname, "password":password, "email":email}
             UID=login_session['user']['localId']
-            db.child('users').child(UID).set(user)
+            db.child('Users').child(UID).set(user)
             return redirect(url_for('signin'))
         except:
             error = "Authentication failed"
@@ -58,27 +58,18 @@ def signin():
    return render_template("signin.html")
 
 
-@app.route('/removeC', methods=['GET', 'POST'])
+@app.route('/removeC')
 def remove():
-    error = ""
-    if request.method == 'GET':
-       # fname = request.form['fname']
-       # lname = request.form['lname']
-       # email = request.form['email']
-       # password = request.form['password']
-       try:
-            UID = login_session['user']['localId']
-            print((UID))
-            db.child("users").child(UID).remove()
-
-            return redirect(url_for('signin'))
-       except Exception as e:
-        return f"{e}"
+    try:
+        UID = login_session['user']['localId']
+        print((UID))
+        db.child("Users").child(UID).remove()
+        return redirect(url_for('signin'))
+    except Exception as e:
         error = "Couldn’t remove object"
-        print ("test2")
-        return render_template("signin.html")
+        print (error)
+        return render_template("home.html")
     return render_template("signin.html")
-
 
 @app.route("/display_user")
 def display_user():
